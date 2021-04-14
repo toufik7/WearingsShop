@@ -1,5 +1,5 @@
 # WearingsShop
-Wearing shop is a simple application that displays products with the filter option, 3 patterns are used for this,
+WearingsShop is a simple application that displays products with the filter option, 3 patterns are used for this,
 prototype pattern :
 Adapter pattern :
   geting data from 2 different files with different structures :
