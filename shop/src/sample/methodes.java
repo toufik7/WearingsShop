@@ -4,8 +4,10 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
+import sample.Services.ServiceAdapter;
 import sample.Wearings.Wearings;
 import static sample.Facade.JfxHelper.*;
+import static sample.Services.Accdb.*;
 
 public class methodes {
     private static ComboBox<String> ibrand;
@@ -27,6 +29,7 @@ public class methodes {
     private static TableColumn<Wearings, Integer> price;
 
     public static GridPane filters(){
+        ServiceAdapter sa = new ServiceAdapter();
 
         GridPane gridPane = makeGP(8,20);
 
@@ -40,6 +43,7 @@ public class methodes {
         ibrand = makeCB("...",false);
         putFilter(gridPane,brand,ibrand,1,2);
         ibrand.getItems().add("...");
+        sa.GetBrand(ibrand); // get brands from ms access
         ibrand.getItems().add("Adidas");
         ibrand.getItems().add("Nike");
         ibrand.getItems().add("Umbro");
@@ -71,8 +75,7 @@ public class methodes {
         igender = makeCB("...",false);
         putFilter(gridPane,gender,igender,4,2);
         igender.getItems().add("...");
-        igender.getItems().add("Male");
-        igender.getItems().add("Female");
+        sa.GetGender(igender); // get brands from ms access
 
         //Color_Label----------------------------------------------------------------------------
         Label color = makeLabel("Color");
@@ -80,12 +83,11 @@ public class methodes {
         icolor = makeCB("...",false);
         putFilter(gridPane,color,icolor,5,2);
         icolor.getItems().add("...");
+        sa.GetColor(icolor); // get color from ms access
         icolor.getItems().add("Green");
-        icolor.getItems().add("Black");
         icolor.getItems().add("White");
         icolor.getItems().add("Red");
         icolor.getItems().add("Orange");
-        icolor.getItems().add("Blue");
 
 
         //Size_Label----------------------------------------------------------------------------
@@ -94,6 +96,7 @@ public class methodes {
         isize = makeCB("...",false);
         putFilter(gridPane,size,isize,6,2);
         isize.getItems().add("...");
+        sa.GetSize(isize); // get size from ms access
         isize.getItems().add("S");
         isize.getItems().add("M");
         isize.getItems().add("L");
