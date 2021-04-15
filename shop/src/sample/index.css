@@ -1,0 +1,46 @@
+.root{
+    -fx-background-color: black;
+    -fx-color-label-visible: white;
+}
+.label{
+    -fx-text-fill: white;
+}
+.table-view .label{
+    -fx-text-fill: black;
+}
+.table-view{
+    -fx-background-color: #ff8303;
+}
+.table-row-cell:selected {
+    -fx-background-color: #ff8303;
+}
+.table-view .table-cell:hover{
+    -fx-border-color:#ff8303 ;
+}
+/*------------------------------------------------------------------*/
+
+/*Change cells of combobox*/
+.combo-box .list-cell:hover {
+    -fx-background-color: #ff8303;
+}
+.combo-box .list-cell:selected {
+    -fx-background-color: white;
+}
+.combo-box:focused{
+    -fx-border-color:#ff8303 ;
+    -fx-border-width: 2px;
+    -fx-border-radius: 2px;
+}
+.combo-box:hover{
+    -fx-border-color:#ff8303 ;
+    -fx-border-width: 2px;
+    -fx-border-radius: 2px;
+}
+/*--------------------------------------------------------------------*/
+
+.tool-bar{
+    -fx-background-color: #ff8303;
+}
+.button:hover{
+    -fx-background-color:#ff8303 ;
+}
