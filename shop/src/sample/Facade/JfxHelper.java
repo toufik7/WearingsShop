@@ -47,6 +47,11 @@ public class JfxHelper {
         window.setTitle("SHOP");
         window.show();
     }
+    public static Scene makeSeane(VBox layout,String css){
+        Scene scene = new Scene(layout, 950, 650);
+        scene.getStylesheets().add(css);
+        return scene;
+    }
     public static Scene makeSeane(VBox layout){
         Scene scene = new Scene(layout, 950, 650);
         return scene;
@@ -63,7 +68,7 @@ public class JfxHelper {
         inventory.setOnAction(e -> window.setScene(scean2));
         return inventory;
     }
-    public static Button makerCreatebtn(Stage window, Scene scean){
+    public static Button makeCreatebtn(Stage window, Scene scean){
         Button crt = new Button();
         crt.setCursor(Cursor.HAND);
         crt.setText("Create");
