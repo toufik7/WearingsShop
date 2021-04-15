@@ -10,6 +10,9 @@ Adapter pattern :
 Facade pattern : 
    using javafx framework 
    
+   a simple css style is made for the interface (index.css) 
+    check this awsome site for greate palettes : https://colorhunt.co/palettes
+   
    used libraries :
        controlsfx-11.0.0   https://mvnrepository.com/artifact/org.controlsfx/controlsfx/11.0.0
        javafx-sdk-11.0.2   https://gluonhq.com/products/javafx/ 
