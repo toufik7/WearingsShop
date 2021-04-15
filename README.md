@@ -2,10 +2,11 @@
 WearingsShop is a simple application that displays products with the filter option, 3 patterns are used for this,
 prototype pattern :
 Adapter pattern :
-  geting data from 2 different files with different structures :
+  geting data from 3 different files with different structures :
       Excel 
       DBF
-     the data is stored in 2 different files ( inventory.xlsx and inventory.dbf )
+      ms access database
+     the data is stored in 3 different files ( inventory.xlsx , inventory.dbf ,inventory.accdb)
 Facade pattern : 
    using javafx framework 
    
@@ -13,6 +14,8 @@ Facade pattern :
        controlsfx-11.0.0   https://mvnrepository.com/artifact/org.controlsfx/controlsfx/11.0.0
        javafx-sdk-11.0.2   https://gluonhq.com/products/javafx/ 
        poi-4.1.2 (Excel )   https://mvnrepository.com/artifact/org.apache.poi/poi/4.1.2
-       xBaseJ    (DBF)     https://sourceforge.net/projects/xbasej/
-       
+       xBaseJ    (DBF)      https://sourceforge.net/projects/xbasej/
+       UCanAccess-5.0.1 (ms access db)  https://sourceforge.net/projects/ucanaccess/
+       please get the latest version of jackcess : 
+       jackcess-4.0.0 (ms access dbf)   https://sourceforge.net/projects/jackcess/files/
       
