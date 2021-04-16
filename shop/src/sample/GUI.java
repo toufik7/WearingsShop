@@ -15,7 +15,7 @@ import static sample.methodes.table;
 public class GUI {
     private VBox layout,layout2;
     private Stage window; private Scene scene,scene2;
-    private String css;
+    public static String css;
     GUI(Stage primaryStage){
 
         Label label1 = makeLabel("Add new Products Here ! -------------------");
@@ -28,7 +28,7 @@ public class GUI {
         //creation peage
         Button inventory = makeInventoryBtn(window, scene2);
         Button crt = makeCreatebtn(window,scene);
-        Button help = makeHelpbtn();
+        Button help = makeHelpbtn(css);
         ToolBar toolbar = makeToolBar(crt,inventory,help);
         BorderPane borderPane = makeBorderPane(toolbar);
         layout = makeLayout(borderPane,label1);
@@ -37,7 +37,7 @@ public class GUI {
         // inventory page
         Button inventory2 = makeInventoryBtn(window, scene2);
         Button crt2 = makeCreatebtn(window,scene);
-        Button help2 = makeHelpbtn();
+        Button help2 = makeHelpbtn(css);
         ToolBar toolbar2 = makeToolBar(inventory2,crt2,help2);
         BorderPane borderPane2 = makeBorderPane(toolbar2);
         layout2 = makeLayout(borderPane2,label2,filters(),table());

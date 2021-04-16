@@ -4,6 +4,9 @@ import sample.Services.ServiceAdapter;
 import sample.Wearings.Wearings;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+
+import static sample.GUI.css;
 
 public class Search {
     public void setResult(List<Wearings> result) {
@@ -49,34 +52,34 @@ public class Search {
             case "mark":
 
                 while(i<result.size()) {
-                    if (!result.get(i).getMark().equals(value)){
+                    if (!result.get(i).getMark().equalsIgnoreCase(value)){
                         result.remove(result.get(i));
                     }else i++;
                 }
                 break;
             case "size":
                 while(i<result.size()) {
-                    if (!result.get(i).getSize().equals(value)){
+                    if (!result.get(i).getSize().equalsIgnoreCase(value)){
                         result.remove(result.get(i));
                     }else i++;
                 }
                 break;
             case "color":
                 while(i<result.size()) {
-                    if (!result.get(i).getColor().equals(value)){
+                    if (!result.get(i).getColor().equalsIgnoreCase(value)){
                         result.remove(result.get(i));
                     }else i++;
                 }
                 break;
             case "gender":
                 while(i<result.size()) {
-                    if (!result.get(i).getGender().equals(value)){
+                    if (!result.get(i).getGender().equalsIgnoreCase(value)){
                         result.remove(result.get(i));
                     }else i++;
                 }
                 break;
             default:
-                AlertBox.display("error","none exsisting filter!");
+                AlertBox.display("error","none exsisting filter!",css);
         }
 
     }
@@ -90,7 +93,7 @@ public class Search {
                     result.remove(result.get(i));
                 }else i++;
             }
-        }else AlertBox.display("error","Please enter both man and min Price");
+        }else AlertBox.display("error","Please enter both man and min Price",css);
 
 
     }

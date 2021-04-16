@@ -1,15 +1,18 @@
 .root{
     -fx-background-color: black;
     -fx-color-label-visible: white;
+
 }
 .label{
     -fx-text-fill: white;
 }
 .table-view .label{
+    -fx-padding: 10px;
     -fx-text-fill: black;
 }
 .table-view{
     -fx-background-color: #ff8303;
+
 }
 .table-row-cell:selected {
     -fx-background-color: #ff8303;
@@ -43,4 +46,14 @@
 }
 .button:hover{
     -fx-background-color:#ff8303 ;
+}
+.button{
+    -fx-padding: 5px;
+}
+#ok{
+    -fx-padding: 5px;
+   -fx-min-width: 50px;
+    -fx-background-insets: 4px;
+
+
 }

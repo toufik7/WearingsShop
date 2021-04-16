@@ -23,6 +23,8 @@ public class AlertBox{
         Button ok = new Button("ok");
         ok.setOnAction(e -> window.close());
 
+
+
         VBox layout = new VBox(10);
         layout.getChildren().addAll(label, ok);
         layout.setAlignment(Pos.CENTER);
@@ -32,7 +34,7 @@ public class AlertBox{
         window.showAndWait();
     }
 
-    public static void display(String title, String msg){
+    public static void display(String title, String msg,String css){
         Stage window = new Stage();
 
         window.initModality(Modality.APPLICATION_MODAL);
@@ -45,12 +47,14 @@ public class AlertBox{
 
         Button ok = new Button("ok");
         ok.setOnAction(e -> window.close());
+        ok.setId("ok");
 
         VBox layout = new VBox(10);
         layout.getChildren().addAll(label, ok);
         layout.setAlignment(Pos.CENTER);
 
         Scene scene = new Scene(layout);
+        scene.getStylesheets().add(css);
         window.setScene(scene);
         window.showAndWait();
     }
