@@ -8,6 +8,8 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
 
+import static sample.GUI.css;
+
 public class AlertBox{
     public static void display(String title, String msg,int width, int height){
         Stage window = new Stage();
@@ -34,7 +36,7 @@ public class AlertBox{
         window.showAndWait();
     }
 
-    public static void display(String title, String msg,String css){
+    public static void display(String title, String msg){
         Stage window = new Stage();
 
         window.initModality(Modality.APPLICATION_MODAL);

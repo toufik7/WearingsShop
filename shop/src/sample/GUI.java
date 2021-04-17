@@ -25,20 +25,20 @@ public class GUI {
 
         window = makeWindow(primaryStage);
 
-        //creation peage
+        /*creation peage
         Button inventory = makeInventoryBtn(window, scene2);
-        Button crt = makeCreatebtn(window,scene);
+        //Button crt = makeCreatebtn(window,scene);
         Button help = makeHelpbtn(css);
         ToolBar toolbar = makeToolBar(crt,inventory,help);
         BorderPane borderPane = makeBorderPane(toolbar);
         layout = makeLayout(borderPane,label1);
-        scene = makeSeane(layout,css);
+        scene = makeSeane(layout,css);*/
 
         // inventory page
         Button inventory2 = makeInventoryBtn(window, scene2);
-        Button crt2 = makeCreatebtn(window,scene);
+        //Button crt2 = makeCreatebtn(window,scene);
         Button help2 = makeHelpbtn(css);
-        ToolBar toolbar2 = makeToolBar(inventory2,crt2,help2);
+        ToolBar toolbar2 = makeToolBar(inventory2,help2);
         BorderPane borderPane2 = makeBorderPane(toolbar2);
         layout2 = makeLayout(borderPane2,label2,filters(),table());
         scene2 = makeSeane(layout2,css);

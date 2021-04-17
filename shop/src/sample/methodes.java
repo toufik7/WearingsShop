@@ -1,9 +1,12 @@
 package sample;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Region;
 import sample.Services.ServiceAdapter;
 import sample.Wearings.Wearings;
 import static sample.Facade.JfxHelper.*;
@@ -54,18 +57,28 @@ public class methodes {
         Label price_min = makeLabel("Price Min");
         Label price_max = makeLabel("Price Max");
         //price_input
-        ipricemin = makeCB("...",false);
-        ipricemax = makeCB("...",false);
+        ipricemin = makeCBp("0",true);
+        ipricemax = makeCBp("0",true);
         putFilter(gridPane,price_min,ipricemin,2,2);
         putFilter(gridPane,price_max,ipricemax,3,2);
-        ipricemin.getItems().add("...");
-        ipricemax.getItems().add("...");
-        ipricemax.getItems().add("120");
-        ipricemax.getItems().add("100");
-        ipricemax.getItems().add("80");
-        ipricemin.getItems().add("50");
-        ipricemin.getItems().add("30");
-        ipricemin.getItems().add("10");
+        ipricemin.valueProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String vold, String vnew) {
+                // If the condition is met show alert box !
+                if(vnew == null || Double.valueOf(vnew) > Double.valueOf(ipricemax.getValue())){
+                    AlertBox.display("Error","value must be less than max price !");
+                }
+            }
+        });
+        ipricemax.valueProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String vold, String vnew) {
+                // If the condition is met show alert box !
+                if(vnew == null || Double.valueOf(vnew) < Double.valueOf(ipricemin.getValue())){
+                    AlertBox.display("Error","value must be grater than min price !");
+                }
+            }
+        });
 
 
 
@@ -124,6 +137,8 @@ public class methodes {
         inventory.getColumns().addAll(
                 product,brand,gender,size,color,price
         );
+
+
         // populate table view when pressing button
     return inventory;
 

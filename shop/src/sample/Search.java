@@ -79,7 +79,7 @@ public class Search {
                 }
                 break;
             default:
-                AlertBox.display("error","none exsisting filter!",css);
+                AlertBox.display("error","none exsisting filter!");
         }
 
     }
@@ -87,13 +87,13 @@ public class Search {
     public void addPriceFilter(double min, double max) {
         //todo: remove the wearings items from result list according to the price filter
         int i=0;
-        if (min!=0 && max!=-1){
+        if (min>=0 && max>=0){
             while(i<result.size()) {
                 if (!(result.get(i).getPrice()>=min && result.get(i).getPrice()<=max)){
                     result.remove(result.get(i));
                 }else i++;
             }
-        }else AlertBox.display("error","Please enter both man and min Price",css);
+        }else AlertBox.display("error","max and min Price should not be null");
 
 
     }
