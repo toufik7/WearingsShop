@@ -27,8 +27,8 @@ Main interface:
 ![Capture d’écran (199)](https://user-images.githubusercontent.com/52804863/115111658-3c82db00-9f79-11eb-98d1-80b67da6c7f7.png)
 
 price filter exception handler :
+![Capture d’écran (202)](https://user-images.githubusercontent.com/52804863/115111726-91265600-9f79-11eb-8187-efb64766feea.png)
 
-![Capture d’écran (200)](https://user-images.githubusercontent.com/52804863/115111612-004f7a80-9f79-11eb-91d2-ee4e07b66af3.png)
 ![Capture d’écran (201)](https://user-images.githubusercontent.com/52804863/115111613-00e81100-9f79-11eb-884b-c07664046933.png)
 
       
