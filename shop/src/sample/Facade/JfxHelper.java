@@ -1,5 +1,7 @@
 package sample.Facade;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.geometry.Insets;
 import javafx.scene.Cursor;
 import javafx.scene.Scene;
@@ -48,7 +50,7 @@ public class JfxHelper {
         window.show();
     }
     public static Scene makeSeane(VBox layout,String css){
-        Scene scene = new Scene(layout, 950, 650);
+        Scene scene = new Scene(layout, 1100, 650);
         scene.getStylesheets().add(css);
         return scene;
     }
@@ -75,16 +77,16 @@ public class JfxHelper {
         crt.setOnAction(e -> window.setScene(scean));
         return crt;
     }
-    public static Button makeHelpbtn(){
+    public static Button makeHelpbtn(String css){
         Button help = new Button();
         help.setCursor(Cursor.HAND);
         help.setText("Help");
         help.setOnAction(e -> AlertBox.display("Help","En Réalisation ..."));
         return help;
     }
-    public static ToolBar makeToolBar(Button crt,Button inventory,Button help){
+    public static ToolBar makeToolBar(/*Button crt,*/Button inventory,Button help){
         ToolBar toolbar = new ToolBar();
-        toolbar.getItems().add(crt);
+        //toolbar.getItems().add(crt);
         toolbar.getItems().add(inventory);
         toolbar.getItems().add(help);
         return toolbar;
@@ -117,6 +119,18 @@ public class JfxHelper {
         cb.setEditable(enable);
         return cb;
     }
+    public static ComboBox<String> makeCBp(String v, boolean enable){
+        ComboBox<String> cb = new ComboBox<>();
+        cb.setValue(v);
+        cb.setEditable(enable);
+        cb.getItems().add("10");
+        cb.getItems().add("50");
+        cb.getItems().add("100");
+        cb.getItems().add("150");
+        cb.getItems().add("200");
+        cb.setMaxWidth(70);
+        return cb;
+    }
     public static void putFilter(GridPane gridPane,Label l,ComboBox<String> cb,int col, int row){
         HBox lcb = new HBox(10);
         lcb.getChildren().addAll(l, cb);
@@ -124,11 +138,13 @@ public class JfxHelper {
     }
     public static Button putButton(GridPane gp,String txt,int col, int row){
          Button btn = new Button(txt);
+         btn.setMinWidth(100);
          gp.add(btn,col,row);
          return btn;
     }
     public static Label putLabel(GridPane gp,String txt,int col, int row){
         Label l = new Label(txt);
+        l.setWrapText(true);
         gp.add(l,col,row);
         return l;
     }
