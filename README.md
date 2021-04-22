@@ -3,13 +3,13 @@ WearingsShop is a simple application that displays products with the filter opti
 ## prototype pattern :
 ## Adapter pattern :
   geting data from 3 different files with different structures :
-      Excel 
-      DBF
-      ms access database
+    - Excel 
+    - DBF
+    - ms access database
      the data is stored in 3 different files ( inventory.xlsx , inventory.dbf ,inventory.accdb)
 ## Facade pattern : 
    using javafx framework 
-   
+   <br />
    a simple css style is made for the interface (index.css) 
     check this awsome site for greate palettes : https://colorhunt.co/palettes
    
